@@ -4,7 +4,7 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
-	padding-top: 44px;
+	padding-top: 24px;
 }
 
 h3 a {
@@ -24,6 +24,8 @@ h3 a:hover {
 	); */
 	background: url(../img/bgAd.jpg) no-repeat top center;
 	background-color: #000000;
+	background-attachment: fixed;
+	background-position-y: 90px;
 }
 
 .wrapper {
@@ -41,7 +43,7 @@ h3 a:hover {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: 40px;
+	margin-bottom: 24px;
 }
 
 .input {
