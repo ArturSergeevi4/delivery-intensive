@@ -642,7 +642,7 @@ a.promo-ads {
 		flex-direction: column;
 		display: flex;
 		background-color: #fff;
-		margin: 0;
+		margin-left: 0;
 	}
 
 	.button-buy img {
@@ -789,6 +789,16 @@ a.promo-ads {
 	.main {
 		background-size: auto 21em;
 		background-position-y: 146px;
+	}
+
+	.search-wrapper-additional-visible {
+		margin-left: -10px;
+		margin-right: 25px;
+		width: -moz-available;
+	}
+
+	.input.input-from {
+		margin-right: 0px;
 	}
 
 	.promo-ads,
