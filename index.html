@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/normalize.css" />
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/animate.css" />
+		<link rel="stylesheet" href="./css/normalize.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/animate.css" />
 		<script
 			type="text/javascript"
 			src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -22,22 +22,51 @@
 			<header class="header">
 				<!-- Логотип -->
 				<a href="index.html" class="logo animated bounce"
-					><img src="img/logo.svg" alt="Logo"
+					><img src="./img/logo.svg" alt="Logo"
 				/></a>
 				<!-- Поле адреса -->
-				<input
-					type="text"
-					class="input input-address"
-					placeholder="Адрес доставки"
-				/>
+				<div class="search-wrapper">
+					<input
+						type="text"
+						class="input input-from"
+						placeholder="Куда доставить?"
+					/>
+					<div class="hidden-wrapper">
+						<div class="search-wrapper-additional">
+							<input
+								type="text"
+								class="input input-where"
+								placeholder="Что доставить?"
+							/>
+							<input
+								type="text"
+								class="input input-phone"
+								placeholder="Ваш номер телефона"
+							/>
+							<button class="button button-buy">
+								<img
+									src="./img/shopping-cart.svg"
+									alt="user"
+									class="button-icon"
+								/>
+							</button>
+						</div>
+					</div>
+				</div>
+				<button
+					class="close-search"
+					onclick="additionalInput.classList.remove('search-wrapper-additional-visible')"
+				>
+					&times;
+				</button>
 				<!-- Блок кнопок для ЛК -->
 				<div class="buttons">
 					<button class="button button-primary">
-						<img src="img/user.svg" alt="user" class="button-icon" />
+						<img src="./img/user.svg" alt="user" class="button-icon" />
 						<span class="button-text">Войти</span>
 					</button>
-					<button class="button" id="cart-button">
-						<img src="img/shopping-cart.svg" alt="cart" class="button-icon" />
+					<button class="button b24-web-form-popup-btn-2" id="cart-button">
+						<img src="./img/shopping-cart.svg" alt="cart" class="button-icon" />
 						<span class="button-text">Корзина</span>
 					</button>
 				</div>
@@ -66,7 +95,7 @@
 				<div class="wrapper">
 					<section class="restaurants">
 						<div class="section-heading">
-							<h2 class="section-title">Рестораны</h2>
+							<h2 class="section-title">Наши Партнеры</h2>
 							<input
 								type="text"
 								class="input input-search"
@@ -77,7 +106,10 @@
 						<div class="cards">
 							<div class="card wow fadeInLeft">
 								<a href="restaurant.html">
-									<img src="img/item-image.jpg" alt="image" class="card-image"
+									<img
+										src="./img/item-image.jpg"
+										alt="image"
+										class="card-image"
 								/></a>
 								<div class="card-text">
 									<div class="card-heading">
@@ -99,7 +131,7 @@
 							<div class="card wow fadeInUp">
 								<a href="restaurant.html">
 									<img
-										src="img/item-image1.jpg"
+										src="./img/item-image1.jpg"
 										alt="image"
 										class="card-image"
 									/>
@@ -124,7 +156,7 @@
 							<div class="card wow fadeInRight">
 								<a href="restaurant.html">
 									<img
-										src="img/item-image2.jpg"
+										src="./img/item-image2.jpg"
 										alt="image"
 										class="card-image"
 									/>
@@ -149,7 +181,7 @@
 							<div class="card wow fadeInLeft">
 								<a href="restaurant.html">
 									<img
-										src="img/item-image3.jpg"
+										src="./img/item-image3.jpg"
 										alt="image"
 										class="card-image"
 									/>
@@ -174,7 +206,7 @@
 							<div class="card wow fadeInUp">
 								<a href="restaurant.html">
 									<img
-										src="img/item-image4.jpg"
+										src="./img/item-image4.jpg"
 										alt="image"
 										class="card-image"
 									/>
@@ -199,7 +231,7 @@
 							<div class="card wow fadeInRight">
 								<a href="restaurant.html">
 									<img
-										src="img/item-image5.jpg"
+										src="./img/item-image5.jpg"
 										alt="image"
 										class="card-image"
 									/>
@@ -234,7 +266,7 @@
 			<div class="container">
 				<div class="footer-block">
 					<a href="index.html" class="logo footer-logo"
-						><img src="img/logo.svg" alt="Logo"
+						><img src="./img/logo.svg" alt="Logo"
 					/></a>
 					<nav class="footer-nav">
 						<a href="#" class="footer-link">Ресторанам</a>
@@ -244,13 +276,13 @@
 					</nav>
 					<div class="social-links">
 						<a href="#" target="_blank" class="social-link"
-							><img src="img/instagram.svg" alt="instagram social link"
+							><img src="./img/instagram.svg" alt="instagram social link"
 						/></a>
 						<a href="#" target="_blank" class="social-link"
-							><img src="img/facebook.svg" alt="facebook social link"
+							><img src="./img/facebook.svg" alt="facebook social link"
 						/></a>
 						<a href="#" target="_blank" class="social-link"
-							><img src="img/vk.svg" alt="vkontakte social link"
+							><img src="./img/vk.svg" alt="vkontakte social link"
 						/></a>
 					</div>
 					<!-- /.social-links -->
@@ -262,8 +294,10 @@
 		<div class="modal">
 			<div class="modal-dialog">
 				<div class="modal-header">
-					<h3 class="modal-title">Корзина</h3>
-					<button class="close">&times;</button>
+					<h3 class="modal-title">Заказ доставки</h3>
+					<button class="close" id="close-modal">
+						&times;
+					</button>
 				</div>
 				<!-- /.modal-header -->
 				<div class="modal-body">
@@ -334,14 +368,36 @@
 					<button class="button button-primary">
 						<span class="button-text">Оформить заказ</span>
 					</button>
-					<button class="button">
-						<span class="button-text">Отмена</span>
+					<button class="button" id="close-modal">
+						<span class="button-text" onclick="closeModal()">Отмена</span>
 					</button>
 				</div>
 				<!-- /.modal-footer -->
 			</div>
 		</div>
-		<script src="js/wow.min.js"></script>
-		<script src="js/main.js"></script>
+		<script src="./js/wow.min.js"></script>
+		<script src="./js/main.js"></script>
+		<script
+			async
+			src="https://telegram.org/js/telegram-widget.js?8"
+			data-telegram-login="Delivery24kgbot"
+			data-size="large"
+			data-radius="20"
+			data-onauth="onTelegramAuth(user)"
+		></script>
+		<script type="text/javascript">
+			function onTelegramAuth(user) {
+				alert(
+					'Logged in as ' +
+						user.first_name +
+						' ' +
+						user.last_name +
+						' (' +
+						user.id +
+						(user.username ? ', @' + user.username : '') +
+						')'
+				)
+			}
+		</script>
 	</body>
 </html>
