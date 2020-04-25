@@ -20,6 +20,15 @@ button {
 	cursor: pointer;
 }
 
+textarea:focus,
+input:focus {
+	outline: none;
+}
+
+*:focus {
+	outline: none;
+}
+
 .main {
 	/* background: linear-gradient(
 		180deg,
@@ -632,7 +641,6 @@ a.promo-ads {
 	.search-wrapper-additional-visible {
 		flex-direction: column;
 		display: flex;
-		margin-left: 0px;
 		background-color: #fff;
 	}
 
@@ -723,10 +731,10 @@ a.promo-ads {
 	}
 
 	.close-search {
-		margin-left: -40px;
-		margin-right: 3px;
+		margin-left: -40px !important;
 		order: 6;
 		align-self: end;
+		margin-right: auto;
 	}
 
 	.promo-ads,
