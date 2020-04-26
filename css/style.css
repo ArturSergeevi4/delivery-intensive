@@ -117,10 +117,12 @@ input:focus {
 	left: 0;
 }
 .input-where {
+	background-image: url(../img/shopping-cart.svg);
 	margin-right: 10px;
 }
 
 .input-phone {
+	background-image: url(../img/phone.svg);
 	margin-right: 10px;
 }
 
@@ -569,6 +571,15 @@ a.promo-ads {
 	.promo {
 		background-position: center right -300px;
 		background-size: 750px;
+	}
+
+	.button-buy img {
+		margin: 0 auto;
+		height: 30px;
+	}
+
+	.modal-dialog {
+		width: 85%;
 	}
 }
 
